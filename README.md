@@ -1,4 +1,8 @@
+
 # WeatherApp
+
+<img src="https://github.com/voronine/weatherApp/blob/main/src/assets/screen.png?raw=true" width="300">
+
 
 WeatherApp is a mobile application built with React Native CLI that displays weather forecasts using a weather API. The app provides users with two main ways to access weather information: through an interactive map and by searching for a city.
 
