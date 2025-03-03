@@ -1,97 +1,36 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# WeatherApp
 
-# Getting Started
+WeatherApp is a mobile application built with React Native CLI that displays weather forecasts using a weather API. The app provides users with two main ways to access weather information: through an interactive map and by searching for a city.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## Features
 
-## Step 1: Start Metro
+- **Interactive Map:**
+  - A creatively styled map serves as the main screen.
+  - Long-pressing on the map places a marker at the chosen location.
+  - Tapping the marker displays the city name and current weather at that location.
+  - Tapping on the displayed weather text navigates the user to a detailed weekly forecast screen.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+- **City Search:**
+  - The "Weather" tab features a search field where users can type in a city name.
+  - Upon tapping the "Search" button, the app retrieves and displays the weather forecast for that city using a weather API (e.g., OpenWeatherMap).
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## Technologies Used
 
-```sh
-# Using npm
-npm start
+- **React Native CLI:** Developed without Expo to allow greater control over native components.
+- **React Navigation:** Utilizes Native Stack Navigator for seamless screen transitions.
+- **react-native-maps:** Used to display the map, handle user gestures, and place markers.
+- **Axios:** For making HTTP requests to retrieve weather data.
+- **Android Studio:** The app is built and compiled for Android using Android Studio.
 
-# OR using Yarn
-yarn start
-```
+## Project Architecture
 
-## Step 2: Build and run your app
+The application consists of two main screens:
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+- **MapScreen:**  
+  Allows users to interact with a map. A long press on the map sets a marker, and tapping on it displays a callout with the city name and current weather. Tapping the callout navigates to the detailed forecast screen.
 
-### Android
+- **WeatherScreen:**  
+  Provides a search interface for users to enter a city name and view the weather forecast for that location.
 
-```sh
-# Using npm
-npm run android
+A custom bottom navigation component is used to switch between these screens.
 
-# OR using Yarn
-yarn android
-```
-
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
